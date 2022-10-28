@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "title": "Surf & Destroy",
+        "subtitle": "Overdriven Reverb",
+        "description": {
+            "paragraph": "The Surf & Destroy was born from a misunderstanding. When I first started recording with my cassette four track many moons ago, I didn’t realize it had a preamp built in (who reads manuals?). My only mic was an SM57, so to get the volume up I would run the mic through a light overdrive pedal before going into the four track. It was wrong, but I loved how it sounded. Especially how it gave my amp reverb just a little bit of dirt and ‘tude, if you know what I mean -and I think you do. The Surf and Destroy is my take on that sound in a pedal. It feeds a nice spring-ish reverb into a versatile gain circuit.",
+            "bullets": [
+                "Here are some things you can do:",
+
+                "- Overdrive your reverb, from just a little touch sensitive crisp to full on blown out gnarly mayhem",
+
+                "- Turn off the overdrive, and just use the reverb totally clean",
+
+                "- Turn down the reverb until it’s just dry signal, and then use the overdrive/fuzz on it’s own",
+
+                "- Run vocals through it, live your lofi dream",
+
+                "- Crank the gain and reverb shoegaze with it (yeah buddy)"
+            ],
+            "details": {
+                "Vol":  "Goes from nothing to above unity",
+
+                "Reverb": "Goes from no reverb to around 50/50 with the clean signal, think a Fender amp with the reverb cranked, that kinda mix",
+
+                "Shark mode": "TURNS ON SHARK MODE",
+
+                "Shark knob": "Gain level, from just barely crispy to nice and cronchy to full blown out gnarly mayhem. This knob doesn’t do anything when shark mode is turned off"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "title": "Ecto Cooler",
+        "subtitle": "Fuzz/Filter/Suboctave",
+        "description": {
+            "paragraph": "The Ecto Cooler pushes out one million tons of goo through an envelope filter controlled by a little ghost that makes your signal get all whimbly whambly. Capable of suboctave rumbles, glitching fuzz, envelope controlled wails, oscillating moans, and aggressively filtered madness.",
+            "details": {
+                "Volume": "Gets really loud",
+                "Filter": "Suboctave lows to violent highs",
+                "Gate": "Self oscillates between notes when turned up, tunable with the filter knob",
+                "Sense": "Sets the sensitivity of the envelope for opening up the filter"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "title": "Noise Ensemble",
+        "subtitle": "Fuzz/Delay/Modulation/Chaos",
+        "description": {
+            "paragraph": "Treat your weird self to the uneasy wobbling echoes and thick hurtful fuzz of the NOISE ENSEMBLE. At it’s heart, this creature is a massive sounding fuzz with an echo that modulates more and more erratically as you turn up the secondary control (right knob). At lower settings, faux reverb and strange filtering sounds, at higher settings, more and more chaos. Left knob is the volume, it’s gets real loud man."
+        }
+    },
+    {
+        "id": 4,
+        "title": "Acid Bath",
+        "subtitle": "Fuzzzzzzz",
+        "description": {
+            "paragraph": "The ACID BATH is a thick fuzz beast based on a silicon fuzz face circuit. It does the good stuff that made that circuit famous, including clean up with your guitar's volume knob. I included a bias trimmer on the PCB so you can get different sounds. I bias them to 4.5V before shipping, but you can adjust the trimmer to bias lower for gated fuzz tones and higher for more bloated goodness. There's even a little bias test point on the PCB for your multimeter, how about that. Also notable: the transistors are socketed, so you can try your own. I go through a few and test the gains to find a pair that I think sounds great, but my feelings won't be too hurt if you want to try other transistors (NPN). I included some pads where you can solder in a very small capacitor (try 40pF), if you want to shave off some high end treble, but I left it out because I think it sounds perfect as is. Like all fuzzes of this nature, sounds best first in your pedal chain. Left knob is volume, right is FUZZZZ."
+        }
+    },
+    {
+        "id": 5,
+        "title": "Stanky Driver",
+        "subtitle": "Overdrive",
+        "description": {
+            "paragraph": "The STANK DRIVER swerved into my heart with it’s earnest ‘tude: one volume knob and a big sweet pile of overdrive. Roll back on your guitar’s volume knob and it reminds me of my deluxe’s cleanup. Keep it pedal to the metal and you still retain all those dynamics and fun stuff. This driver features an internal trimmer for gain. It gets a really nice edge of breakup. For when you’re on the edge of breaking up."
+        }
+    }
+]
