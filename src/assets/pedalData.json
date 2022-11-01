@@ -27,7 +27,9 @@
 
                 "Shark knob": "Gain level, from just barely crispy to nice and cronchy to full blown out gnarly mayhem. This knob doesn’t do anything when shark mode is turned off"
             }
-        }
+        },
+        "image": "/static/media/surf_and_destroy_pedal.fb9431752e4263efe549.png",
+        "link": "/surf-and-destroy"
     },
     {
         "id": 2,
@@ -41,7 +43,9 @@
                 "Gate": "Self oscillates between notes when turned up, tunable with the filter knob",
                 "Sense": "Sets the sensitivity of the envelope for opening up the filter"
             }
-        }
+        },
+        "image": "/static/media/ecto_cooler_pedal.0a057d497b2f0b60158a.png",
+        "link": "/ecto-cooler"
     },
     {
         "id": 3,
@@ -49,7 +53,9 @@
         "subtitle": "Fuzz/Delay/Modulation/Chaos",
         "description": {
             "paragraph": "Treat your weird self to the uneasy wobbling echoes and thick hurtful fuzz of the NOISE ENSEMBLE. At it’s heart, this creature is a massive sounding fuzz with an echo that modulates more and more erratically as you turn up the secondary control (right knob). At lower settings, faux reverb and strange filtering sounds, at higher settings, more and more chaos. Left knob is the volume, it’s gets real loud man."
-        }
+        },
+        "image": "/static/media/noise_ensemble_pedal.9f819bc0f00b97f249ee.png",
+        "link": "/noise-ensemble"
     },
     {
         "id": 4,
@@ -57,7 +63,9 @@
         "subtitle": "Fuzzzzzzz",
         "description": {
             "paragraph": "The ACID BATH is a thick fuzz beast based on a silicon fuzz face circuit. It does the good stuff that made that circuit famous, including clean up with your guitar's volume knob. I included a bias trimmer on the PCB so you can get different sounds. I bias them to 4.5V before shipping, but you can adjust the trimmer to bias lower for gated fuzz tones and higher for more bloated goodness. There's even a little bias test point on the PCB for your multimeter, how about that. Also notable: the transistors are socketed, so you can try your own. I go through a few and test the gains to find a pair that I think sounds great, but my feelings won't be too hurt if you want to try other transistors (NPN). I included some pads where you can solder in a very small capacitor (try 40pF), if you want to shave off some high end treble, but I left it out because I think it sounds perfect as is. Like all fuzzes of this nature, sounds best first in your pedal chain. Left knob is volume, right is FUZZZZ."
-        }
+        },
+        "image": "/static/media/acid_bath_pedal.b1ff92dd8ace0ff80ffe.png",
+        "link": "/acid-bath"
     },
     {
         "id": 5,
@@ -65,6 +73,8 @@
         "subtitle": "Overdrive",
         "description": {
             "paragraph": "The STANK DRIVER swerved into my heart with it’s earnest ‘tude: one volume knob and a big sweet pile of overdrive. Roll back on your guitar’s volume knob and it reminds me of my deluxe’s cleanup. Keep it pedal to the metal and you still retain all those dynamics and fun stuff. This driver features an internal trimmer for gain. It gets a really nice edge of breakup. For when you’re on the edge of breaking up."
-        }
+        },
+        "image": "/static/media/stanky_driver_pedal.14ae22b8b2ac445e64f4.png",
+        "link": "/stanky-driver"
     }
 ]

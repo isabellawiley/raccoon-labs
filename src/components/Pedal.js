@@ -7,7 +7,7 @@ function Pedal({selectedPedal}){
 
     return(
         <div className="pedal-container">
-            <span className="title">
+            <span className="pedal-title">
                 <h1>{title}</h1>
             </span>
             <span className="description">
@@ -21,7 +21,7 @@ function Pedal({selectedPedal}){
                     <p><strong>{line[0]} - </strong>{line[1]}</p>
                 )  : <p></p>
             }
-            <button><a href="/how-to-buy">Buy</a></button>
+            <a href="/how-to-buy"><button className="white-button">BUY</button></a>
             </span>
         </div>
     )

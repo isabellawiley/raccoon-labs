@@ -12,6 +12,72 @@ code {
     monospace;
 }
 
+/* .container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+.container {
+  width: 90%;
+  margin-left: 10%;
+}
+
+.about {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.contact {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font: roboto-bold;
+  font-size: 300%;
+}
+
+/* font 9 normal normal normal 15px/1.875em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif; */
+
+p {
+  font: helvetica-w01-roman;
+}
+
+.white-button{
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 1.5%;
+  font-size: large;
+  margin: 1%;
+  transition-duration: 0.4s;
+}
+
+.white-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.black-button {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  border-radius: 25px;
+  padding: 1.5%;
+  font-size: large;
+  margin: 1%;
+  transition-duration: 0.4s;
+}
+
+.black-button:hover {
+  background-color: grey;
+  border: 2px solid grey;
+}
+
 .navbar {
   width: 90%;
   margin: auto;
@@ -46,7 +112,7 @@ hr {
 
 .dropdown li{
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .dropdown-content {
@@ -57,23 +123,25 @@ hr {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   top: 20%;
-  left: 8%;
+  left: 12%;
 }
 
 .dropdown-content li {
   color: black;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content li:hover {background-color: #ddd;}
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-.title {
+.pedal-title {
   flex-basis: 25%;
   font-size: 300%;
 }
@@ -87,4 +155,50 @@ hr {
   justify-content: center;
   align-items: center;
   gap: 5%;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 20%;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card:hover img{
+  opacity: .5;
+}
+
+.card-text {
+  color: white;
+  position: absolute;
+  width: 90%;
+  text-align: left;
+  word-wrap: break-word;
+  padding: 15px;
 }
