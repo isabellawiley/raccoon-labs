@@ -16,6 +16,7 @@ function App() {
   return (
     <div>
       <NavBar setPedal={setPedal} allPedals={allPedals}/>
+      <div className='container'>
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -36,6 +37,7 @@ function App() {
           <Pedal selectedPedal={pedal} />
         </Route>
       </Switch>
+      </div>
     </div>
   );
 }
