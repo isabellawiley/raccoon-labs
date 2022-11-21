@@ -11,15 +11,13 @@ import Pedal from './Pedal';
 
 function App() {
   const [pedal, setPedal] = useState({});
-  // console.log(pedal);
 
   return (
-    <div>
+    <div className='app'>
       <NavBar setPedal={setPedal} allPedals={allPedals}/>
-      <div className='container'>
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home allPedals={allPedals} setPedal={setPedal} />
         </Route>
         <Route exact path='/pedals'>
           <Pedals allPedals={allPedals} setPedal={setPedal}/>
@@ -34,10 +32,9 @@ function App() {
           <Contact />
         </Route>
         <Route path="/:id">
-          <Pedal selectedPedal={pedal} />
+          <Pedal selectedPedal={pedal}  allPedals={allPedals}/>
         </Route>
       </Switch>
-      </div>
     </div>
   );
 }

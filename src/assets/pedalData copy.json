@@ -30,7 +30,7 @@
         },
         "image": "images/surf_and_destroy_pedal.png",
         "images": ["images/surf_and_destroy_pedal.png", "images/surf_and_destroy_pedal-front.png"],
-        "link": "surf-and-destroy",
+        "link": "/surf-and-destroy",
         "video": "https://www.youtube.com/embed/oFygKHRTIMc"
     },
     {
@@ -48,7 +48,7 @@
         },
         "image": "images/ecto_cooler_pedal.png",
         "images": ["images/ecto_cooler_pedal.png", "images/ecto_cooler_pedal-front.png", "images/ecto_cooler_pedal-back.png"],
-        "link": "ecto-cooler",
+        "link": "/ecto-cooler",
         "video": "https://www.youtube.com/embed/i4r82ZraGAA"
     },
     {
@@ -60,7 +60,7 @@
         },
         "image": "images/noise_ensemble_pedal.png",
         "images": ["images/noise_ensemble_pedal.png", "images/noise_ensemble_pedal-front.png", "images/noise_ensemble_pedal-back.png"],
-        "link": "noise-ensemble",
+        "link": "/noise-ensemble",
         "video": "https://www.youtube.com/embed/ov7C6KKKFAk"
     },
     {
@@ -72,7 +72,7 @@
         },
         "image": "images/acid_bath_pedal.png",
         "images": ["images/acid_bath_pedal.png", "images/acid_bath_pedal-front.png", "images/acid_bath_pedal-back.png"],
-        "link": "acid-bath",
+        "link": "/acid-bath",
         "video": "https://www.youtube.com/embed/O5t8ylkxT0w"
     },
     {
@@ -83,7 +83,7 @@
             "paragraph": "The STANK DRIVER swerved into my heart with it’s earnest ‘tude: one volume knob and a big sweet pile of overdrive. Roll back on your guitar’s volume knob and it reminds me of my deluxe’s cleanup. Keep it pedal to the metal and you still retain all those dynamics and fun stuff. This driver features an internal trimmer for gain. It gets a really nice edge of breakup. For when you’re on the edge of breaking up."
         },
         "image": "images/stanky_driver_pedal.png",
-        "images": ["images/stanky_driver_pedal.png", "images/stanky_driver_pedal-front.png", "images/stanky_driver_pedal-back.png"],
-        "link": "stanky-driver"
+        "images": ["images/stanky_driver_pedal.png", "./assets/link_icon.png", "images/stanky_driver_pedal-back.png"],
+        "link": "/stanky-driver"
     }
 ]

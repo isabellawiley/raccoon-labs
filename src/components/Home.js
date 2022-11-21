@@ -1,9 +1,30 @@
+import Insta from './Insta';
+import InstagramFeed from './InstagramFeed';
+import Pedals from './Pedals';
+// import insta from './Insta.html'
 
-function Home() {
+function Home({allPedals, setPedal}) {
 
     return(
         <div>
-            <h1>Home</h1>
+            <div>
+                <Pedals allPedals={allPedals} setPedal={setPedal}/>
+            </div>
+            <div className='grey-container'>
+                <div className='centered small-container'>
+                    <h1>
+                        Audio effect units made in Houston, TX
+                        from stolen NASA equipment
+                        and bayou mud
+                    </h1>
+                    <p>Buy directly by e-mailing me at Raccoonlabsfx@gmail.com</p>
+                    <p>Or visit my Reverb.com Store below:</p>
+                    <button className="white button">Reverb.com Store</button>
+                </div>
+            </div>
+            <div>
+                
+            </div>
         </div>
     )
 }

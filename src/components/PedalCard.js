@@ -13,8 +13,8 @@ function PedalCard({pedal, setPedal}){
             <Link to={link}><img src={image} alt={title} />
             <div className="card-overlay">
                 <div className="card-text">
-                    <h1>{title}</h1>
-                    <h2>{subtitle}</h2>
+                    <h2>{title}</h2>
+                    <h3>{subtitle}</h3>
                 </div>
             </div>
             </Link>

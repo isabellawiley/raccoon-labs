@@ -19,67 +19,119 @@ code {
   flex-wrap: wrap;
 } */
 
+.app {
+  padding-bottom: 140px;
+}
+
 .container {
   width: 90%;
   margin: auto;
   padding: 10px;
 }
 
+.header {
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  z-index: 1;
+  top: 0%;
+}
+
+/* .navbar-container{
+  position: sticky;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+} */
+
+.grey-container {
+  background-color: rgba(128, 128, 128, 0.075);
+  padding: 10%;
+}
+
+.centered {
+  margin: auto;
+}
+
+.small-container {
+  width: 50%;
+  text-align: center;
+}
+
 .about {
   width: 70%;
   margin: auto;
   text-align: center;
+  padding-top: 5%;
 }
 
 .contact {
-  width: 50%;
+  width: 70%;
   margin: auto;
   text-align: center;
+  padding-top: 5%;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+.contact img {
+  margin: 5px;
+  width: 30px;
 }
 
 .title {
-  font: roboto-bold;
-  font-size: 300%;
+  font-size: 500%;
 }
 
 /* font 9 normal normal normal 15px/1.875em helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif; */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 p {
-  font: helvetica-w01-roman;
+  font-size: large;
+}
+/*helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;*/
+
+/* button styling */
+
+.button {
+  border: 1.5px solid black;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: large;
+  margin: 1%;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.white-button{
+.white.button {
   background-color: white;
-  border: 2px solid black;
-  border-radius: 25px;
-  padding: 1.5%;
-  font-size: large;
-  margin: 1%;
-  transition-duration: 0.4s;
 }
 
-.white-button:hover {
+.white.button:hover {
   background-color: black;
   color: white;
 }
 
-.black-button {
+.black.button {
   background-color: black;
-  border: 2px solid black;
   color: white;
-  border-radius: 25px;
-  padding: 1.5%;
-  font-size: large;
-  margin: 1%;
-  transition-duration: 0.4s;
 }
 
-.black-button:hover {
+.black.button:hover {
   background-color: grey;
   border: 2px solid grey;
 }
-
-.logo {
+/* .logo {
   display: flex;
   align-items: center;
 }
@@ -94,14 +146,25 @@ p {
   width: 83px;
   height: 80px;
   margin: 10px;
-}
-
+} */
 .navbar {
   overflow: hidden;
   background-color: white;
+  display: flex;
 }
 
-.navbar a {
+#nav-list {
+  display: flex;
+  padding: 0;
+}
+
+#nav-list li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+#nav-list li a {
+  display: block;
   float: left;
   font-size: large;
   text-align: center;
@@ -113,6 +176,7 @@ p {
 .dropdown {
   float: left;
   overflow: hidden;
+  width: 100%;
 }
 
 .dropdown .dropbtn {
@@ -121,11 +185,12 @@ p {
   outline: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   background-color: inherit;
   font-family: inherit;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover {
+.navbar a:hover, .dropdown-content a:hover {
   background-color: rgba(193, 193, 193, 0.687);
 }
 
@@ -163,7 +228,7 @@ hr {
 .links {
   display: flex;
   position: absolute;
-  right: 5%;
+  right: 0%;
 }
 
 .links img {
@@ -178,11 +243,38 @@ hr {
   flex-basis: 50%;
 }
 
+.spacing {
+  margin-bottom: 40px;
+}
+
+.spacing p {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
 .pedal-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 5%;
+  /* align-items: center; */
+  gap: 10%;
+  padding-top: 15px;
+}
+
+.pedal-image {
+  padding: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pedal-image img {
+  width: 600px;
+  height: 600px;
+}
+
+.pedal-video {
+  background-color: #a5ffee;
+  margin: auto;
+  padding: 10%;
 }
 
 .cards-container {
@@ -211,7 +303,7 @@ hr {
   width: 100%;
   opacity: 0;
   transition: .5s;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card:hover .card-overlay {
@@ -219,14 +311,19 @@ hr {
 }
 
 .card:hover img{
-  opacity: .5;
+  opacity: .75;
 }
 
 .card-text {
   color: white;
-  position: absolute;
-  width: 90%;
+  /* position: absolute; */
+  width: 80%;
   text-align: left;
   word-wrap: break-word;
   padding: 15px;
+  margin: auto;
+}
+
+.card-text h2, .card-text h3 {
+  font-weight: normal;
 }
