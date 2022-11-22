@@ -8,6 +8,8 @@ import Contact from './Contact';
 import { useState } from "react";
 import allPedals from "../assets/pedalData.json";
 import Pedal from './Pedal';
+import '../styling/pedals.css'
+import '../styling/responsive.css'
 
 function App() {
   const [pedal, setPedal] = useState({});

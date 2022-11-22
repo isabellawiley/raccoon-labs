@@ -23,12 +23,6 @@ code {
   padding-bottom: 140px;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  padding: 10px;
-}
-
 .header {
   width: 100%;
   background-color: white;
@@ -48,9 +42,10 @@ code {
 } */
 
 .grey-container {
-  background-color: rgba(128, 128, 128, 0.075);
+  background-color: rgba(128, 128, 128, 0.095);
   padding: 10%;
 }
+/*check mobile*/
 
 .centered {
   margin: auto;
@@ -61,30 +56,8 @@ code {
   text-align: center;
 }
 
-.about {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-  padding-top: 5%;
-}
 
-.contact {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-  padding-top: 5%;
-}
 
-.contact a {
-  text-decoration: none;
-  color: black;
-  font-size: large;
-}
-
-.contact img {
-  margin: 5px;
-  width: 30px;
-}
 
 .title {
   font-size: 500%;

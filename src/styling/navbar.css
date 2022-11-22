@@ -60,7 +60,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    /* padding: 0.5rem 0rem; */
+    padding: 1rem 0rem;
     background-color: #fff;
     color: black;
 }
@@ -109,7 +109,7 @@
 
     .links {
         left: 0%;
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
     /* .navbar.expanded {
@@ -199,7 +199,7 @@
         width: 100%;
     }
     
-    .show.dropdown-content {
+    .show {
         display: block;
     }
 

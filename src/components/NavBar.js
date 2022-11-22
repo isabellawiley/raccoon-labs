@@ -2,7 +2,7 @@ import logo from "../assets/raccoon_labs_logo.png";
 import instagram_logo from "../assets/instagram_logo.png" ;
 import link_icon from "../assets/link_icon.png";
 import { Link } from "react-router-dom";
-import "../navbar.css"
+import "../styling/navbar.css"
 import { useState } from "react";
 
 function NavBar({setPedal, allPedals}) {

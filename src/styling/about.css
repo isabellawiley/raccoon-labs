@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 769px) {
+   
+    .about {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        padding-top: 5%;
+        background-color: rgba(128, 128, 128, 0.095);
+        padding: 10%;
+    }
+
+    .about h1 {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+      
+    .about {
+        background-color: rgba(128, 128, 128, 0.095);
+        padding: 8% 5%;
+    }  
+
+    .about h1 {
+        margin: 0;
+    }
+}

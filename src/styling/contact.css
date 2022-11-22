@@ -1,0 +1,43 @@
+.contact {
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+.contact img {
+    margin: 5px;
+    width: 30px;
+}
+
+.contact h1 {
+    /* flex-basis: 25%; */
+    font-size: 300%;
+    margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    
+    .grey-container {
+        background-color: rgba(128, 128, 128, 0.095);
+        padding: 10%;
+    }  
+
+    .contact {
+        width: 70%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    .grey-container {
+        background-color: rgba(128, 128, 128, 0.095);
+        padding: 10%;
+    }  
+}

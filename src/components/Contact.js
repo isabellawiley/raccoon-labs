@@ -1,11 +1,12 @@
 import instagram from "../assets/instagram_logo.png";
 import link from "../assets/link_icon.png";
+import "../styling/contact.css"
 
 function Contact() {
 
     return(
         <div className="grey-container contact">
-            <h1 className="pedal-title">Contact</h1>
+            <h1>Contact</h1>
             <a href="mailto:raccoonlabsfx@gmail.com">
                 <p>raccoonlabsfx@gmail.com</p>
             </a>
