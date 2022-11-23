@@ -36,7 +36,12 @@ function NavBar({setPedal, allPedals}) {
                             <li><a href="/">Home</a></li>
                             <li>
                                 <div className="dropdown">
-                                    <button className="dropbtn"><a href="/pedals">Pedals</a><i className={isActive ? "arrow" : null} onClick={() => setShowDrop(!showDrop)}></i></button>
+                                    <button className="dropbtn">
+                                        <a href="/pedals">Pedals</a>
+                                        <div className="arrow-container">
+                                            <i className="arrow" onClick={() => setShowDrop(!showDrop)}></i>
+                                        </div>
+                                    </button>
                                     {/* <div className={isActive ? "navigation-menu expanded" : "navigation-menu"}> */}
                                     <ul className={showDrop ? "show dropdown-content" : "dropdown-content"}>
                                         <li onClick={() => handleClick(0)}><Link to='/surf-and-destroy'>Surf & Destroy</Link></li>
