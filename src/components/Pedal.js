@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import Slideshow from "./Slideshow";
 
 function Pedal({selectedPedal, allPedals}){
     let {id} = useParams();
@@ -43,13 +44,17 @@ function Pedal({selectedPedal, allPedals}){
             </div>
             {images ? 
             <div className="pedal-image">
-                <img src={images[1]} alt={title}/>
-                {images[2] ? <img src={images[2]} alt={title}/> : null}
+                {images.map((pic, index) =>
+                    <img src={pic} alt={title} key={index} />
+                )}
+                {/* <img src={images[1]} alt={title}/>
+                {images[2] ? <img src={images[2]} alt={title}/> : null} */}
             </div>
             : null}
+            {images ? <Slideshow images={images} /> : null}
             {video ? 
                 <div className="pedal-video">
-                    <iframe width="1280" height="720" src={video} title={title}></iframe>
+                    <iframe src={video} title={title}></iframe>
                 </div>
              : null}
         </div>

@@ -1,4 +1,65 @@
 
+.spacing {
+    margin-bottom: 40px;
+}
+
+.spacing p {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.pedal-video {
+  background-color: #a5ffee;
+  margin: auto;
+}
+
+.pedal-image {
+    display: none;
+}
+
+.slideshow {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+
+    .pedal-container {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 10%;
+        padding-top: 15px;
+    }
+
+    .pedal-title {
+        flex-basis: 25%;
+        font-size: 300%;
+    }
+      
+    .description {
+        flex-basis: 50%;
+    }
+
+    .pedal-image {
+        padding: 5%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+      
+    .pedal-image img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .pedal-video {
+        padding: 10%;
+    }
+
+    .pedal-video iframe {
+        width: 1280px;
+        height: 720px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .cards-container {
@@ -7,4 +68,83 @@
     .card {
         width: 100%;
     }
+
+    /* Pedal Page Style */
+
+    .pedal-video {
+        padding: 10% 3%;
+    }
+
+    .pedal-video iframe {
+        width: 100%;
+        height: 220px;
+        margin: auto;
+    }
+
+    /* Pedal Slideshow */
+
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .slideshow {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-snap-stop: always;
+    }
+
+    .slideshow::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slideshow img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        text-shadow: 1px 1px 10px black;
+        /* font-weight: bold; */
+        font-size: 50px;
+        transition: 0.6s ease;
+        user-select: none;
+        z-index: 1;
+    }
+
+    .slideshow-arrow {
+        filter: drop-shadow(2px 2px 4px rgb(0 0 0 / 0.4));
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+        left: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .slide {
+        transition: ease 1000ms;
+        white-space: nowrap;
+      }
 }

@@ -1,7 +1,4 @@
-import Insta from './Insta';
-import InstagramFeed from './InstagramFeed';
 import Pedals from './Pedals';
-// import insta from './Insta.html'
 
 function Home({allPedals, setPedal}) {
 

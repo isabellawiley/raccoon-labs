@@ -29,7 +29,7 @@
             }
         },
         "image": "images/surf_and_destroy_pedal.png",
-        "images": ["images/surf_and_destroy_pedal.png", "images/surf_and_destroy_pedal-front.png"],
+        "images": ["images/surf_and_destroy_pedal-front.png"],
         "link": "surf-and-destroy",
         "video": "https://www.youtube.com/embed/oFygKHRTIMc"
     },
@@ -47,7 +47,7 @@
             }
         },
         "image": "images/ecto_cooler_pedal.png",
-        "images": ["images/ecto_cooler_pedal.png", "images/ecto_cooler_pedal-front.png", "images/ecto_cooler_pedal-back.png"],
+        "images": ["images/ecto_cooler_pedal-front.png", "images/ecto_cooler_pedal-back.png"],
         "link": "ecto-cooler",
         "video": "https://www.youtube.com/embed/i4r82ZraGAA"
     },
@@ -59,7 +59,7 @@
             "paragraph": "Treat your weird self to the uneasy wobbling echoes and thick hurtful fuzz of the NOISE ENSEMBLE. At it’s heart, this creature is a massive sounding fuzz with an echo that modulates more and more erratically as you turn up the secondary control (right knob). At lower settings, faux reverb and strange filtering sounds, at higher settings, more and more chaos. Left knob is the volume, it’s gets real loud man."
         },
         "image": "images/noise_ensemble_pedal.png",
-        "images": ["images/noise_ensemble_pedal.png", "images/noise_ensemble_pedal-front.png", "images/noise_ensemble_pedal-back.png"],
+        "images": ["images/noise_ensemble_pedal-front.png", "images/noise_ensemble_pedal-back.png"],
         "link": "noise-ensemble",
         "video": "https://www.youtube.com/embed/ov7C6KKKFAk"
     },
@@ -71,7 +71,7 @@
             "paragraph": "The ACID BATH is a thick fuzz beast based on a silicon fuzz face circuit. It does the good stuff that made that circuit famous, including clean up with your guitar's volume knob. I included a bias trimmer on the PCB so you can get different sounds. I bias them to 4.5V before shipping, but you can adjust the trimmer to bias lower for gated fuzz tones and higher for more bloated goodness. There's even a little bias test point on the PCB for your multimeter, how about that. Also notable: the transistors are socketed, so you can try your own. I go through a few and test the gains to find a pair that I think sounds great, but my feelings won't be too hurt if you want to try other transistors (NPN). I included some pads where you can solder in a very small capacitor (try 40pF), if you want to shave off some high end treble, but I left it out because I think it sounds perfect as is. Like all fuzzes of this nature, sounds best first in your pedal chain. Left knob is volume, right is FUZZZZ."
         },
         "image": "images/acid_bath_pedal.png",
-        "images": ["images/acid_bath_pedal.png", "images/acid_bath_pedal-front.png", "images/acid_bath_pedal-back.png"],
+        "images": ["images/acid_bath_pedal-front.png", "images/acid_bath_pedal-back.png"],
         "link": "acid-bath",
         "video": "https://www.youtube.com/embed/O5t8ylkxT0w"
     },
@@ -83,7 +83,7 @@
             "paragraph": "The STANK DRIVER swerved into my heart with it’s earnest ‘tude: one volume knob and a big sweet pile of overdrive. Roll back on your guitar’s volume knob and it reminds me of my deluxe’s cleanup. Keep it pedal to the metal and you still retain all those dynamics and fun stuff. This driver features an internal trimmer for gain. It gets a really nice edge of breakup. For when you’re on the edge of breaking up."
         },
         "image": "images/stanky_driver_pedal.png",
-        "images": ["images/stanky_driver_pedal.png", "images/stanky_driver_pedal-front.png", "images/stanky_driver_pedal-back.png"],
+        "images": ["images/stanky_driver_pedal-front.png", "images/stanky_driver_pedal-back.png"],
         "link": "stanky-driver"
     }
 ]

@@ -4,13 +4,32 @@ import link_icon from "../assets/link_icon.png";
 import { Link } from "react-router-dom";
 import "../styling/navbar.css"
 import { useState } from "react";
+import { useEffect } from "react";
 
 function NavBar({setPedal, allPedals}) {
     const [isActive, setIsActive] = useState(false);
     const [showDrop, setShowDrop] = useState(false);
 
+    // useEffect(() => {
+    //     let navList = document.getElementById('nav-list');
+    //     let btns = navList.getElementsByClassName('nav-btn');
+    //     console.log('hi')
+
+    //     for(let i = 0; i < btns.length; i++) {
+    //         console.log('hello')
+    //         btns[i].addEventListener("click", function() {
+    //             let current = document.getElementsByClassName("active");
+    //             current[0].className = current[0].className.replace(" active", "");
+    //             this.className += " active";
+    //             console.log(this)
+    //         });
+    //     }
+    // })    
+
     function handleClick(index) {
         setPedal(allPedals[index]);
+        setShowDrop(false);
+        setIsActive(false);
     }
 
     return(
@@ -33,13 +52,13 @@ function NavBar({setPedal, allPedals}) {
                 <div className="navigation">
                     <div className={isActive ? "navbar expanded" : "navbar"}>
                         <ul id="nav-list">
-                            <li><a href="/">Home</a></li>
-                            <li>
+                            <li className="nav-btn"><a href="/">Home</a></li>
+                            <li className="nav-btn">
                                 <div className="dropdown">
                                     <button className="dropbtn">
                                         <a href="/pedals">Pedals</a>
                                         <div className="arrow-container">
-                                            <i className="arrow" onClick={() => setShowDrop(!showDrop)}></i>
+                                            <i className={showDrop ? "arrow up" : "arrow down"} onClick={() => setShowDrop(!showDrop)}></i>
                                         </div>
                                     </button>
                                     {/* <div className={isActive ? "navigation-menu expanded" : "navigation-menu"}> */}
@@ -53,9 +72,9 @@ function NavBar({setPedal, allPedals}) {
                                 {/* </div> */}
                                 </div>
                             </li>
-                            <li><a href="/how-to-buy">How To Buy</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
+                            <li className="nav-btn"><a href="/how-to-buy">How To Buy</a></li>
+                            <li className="nav-btn"><a href="/about">About</a></li>
+                            <li className="nav-btn"><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                     <div className="links">
@@ -63,28 +82,6 @@ function NavBar({setPedal, allPedals}) {
                         <a href="https://www.instagram.com/raccoonlabs/" target="_blank" rel="noreferrer"><img src={instagram_logo} alt="instagram"/></a>
                     </div>
                 </div>
-                {/* <div className="navigation">
-                    
-                    <div className={isActive ? "navigation-menu expanded" : "navigation-menu"}>
-                        <ul>
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li>
-                                <a href="/pedals">Pedals</a>
-                            </li>
-                            <li>
-                                <a href="/how-to-buy">How To Buy</a>
-                            </li>
-                            <li>
-                                <a href="/about">About</a>
-                            </li>
-                            <li>
-                                <a href="/contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> */}
             </div>
         </div>
     )

@@ -31,16 +31,6 @@ code {
   top: 0%;
 }
 
-/* .navbar-container{
-  position: sticky;
-  width: 90%;
-  margin: auto;
-  padding: 10px;
-  background-color: white;
-  z-index: 1;
-  top: 0;
-} */
-
 .grey-container {
   background-color: rgba(128, 128, 128, 0.095);
   padding: 10%;
@@ -120,23 +110,18 @@ p {
   height: 80px;
   margin: 10px;
 } */
-.navbar {
-  overflow: hidden;
-  background-color: white;
-  display: flex;
-}
 
-#nav-list {
+/* #nav-list {
   display: flex;
   padding: 0;
-}
+} */
 
-#nav-list li {
+/* #nav-list li {
   list-style-type: none;
   margin: 0 1rem;
-}
+} */
 
-#nav-list li a {
+/* #nav-list li a {
   display: block;
   float: left;
   font-size: large;
@@ -144,56 +129,9 @@ p {
   text-decoration: none;
   padding: 14px 16px;
   color: black;
-}
+} */
 
 
-
-
-
-
-
-.pedal-title {
-  flex-basis: 25%;
-  font-size: 300%;
-}
-
-.description {
-  flex-basis: 50%;
-}
-
-.spacing {
-  margin-bottom: 40px;
-}
-
-.spacing p {
-  margin-top: 0.5em;
-  margin-bottom: 0;
-}
-
-.pedal-container {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  gap: 10%;
-  padding-top: 15px;
-}
-
-.pedal-image {
-  padding: 5%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.pedal-image img {
-  width: 600px;
-  height: 600px;
-}
-
-.pedal-video {
-  background-color: #a5ffee;
-  margin: auto;
-  padding: 10%;
-}
 
 .cards-container {
   display: flex;
