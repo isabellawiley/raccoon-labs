@@ -48,7 +48,7 @@ function NavBar({setPedal, allPedals}) {
                         <div className="bar3"></div>
                     </div>
                 </div>
-                <hr></hr>
+                <div className="h_line"></div>
                 <div className="navigation">
                     <div className={isActive ? "navbar expanded" : "navbar"}>
                         <ul id="nav-list">

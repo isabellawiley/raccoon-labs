@@ -39,5 +39,6 @@
     .grey-container {
         background-color: rgba(128, 128, 128, 0.095);
         padding: 10%;
+        margin-top: 10px;
     }  
 }

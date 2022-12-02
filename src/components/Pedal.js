@@ -23,7 +23,7 @@ function Pedal({selectedPedal, allPedals}){
                     <h1>{title}</h1>
                 </span>
                 <span className="description">
-                <h2>{subtitle}</h2>
+                <h2 className="spacing">{subtitle}</h2>
                 <div className="spacing">
                 <p>{description?.paragraph}</p>
                 </div>
@@ -53,9 +53,11 @@ function Pedal({selectedPedal, allPedals}){
             : null}
             {images ? <Slideshow images={images} /> : null}
             {video ? 
+            <div className="pedal-video-container">
                 <div className="pedal-video">
                     <iframe src={video} title={title}></iframe>
                 </div>
+            </div>
              : null}
         </div>
     )

@@ -46,7 +46,7 @@ function Slideshow({images}) {
                     )}
                 </div>
             </div> 
-            : <img src={images[0]} alt='pedal image' className="slideshowImage"/>}
+            : <div className='slideshow'><img src={images[0]} alt='pedal image' className="slideshowImage"/></div>}
         </div>
     )
 }

@@ -8,9 +8,28 @@
     margin-bottom: 0;
 }
 
+.pedal-video-container {
+    background-color: #a5ffee;
+    padding: 8% 0%;
+}
+
 .pedal-video {
-  background-color: #a5ffee;
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  padding-top: 56.25%;
   margin: auto;
+}
+
+.pedal-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .pedal-image {
@@ -51,14 +70,18 @@
         height: 600px;
     }
 
-    .pedal-video {
+    .prev, .next {
+        display: none;
+    }
+
+    /* .pedal-video {
         padding: 10%;
     }
 
     .pedal-video iframe {
         width: 1280px;
         height: 720px;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) {
@@ -71,7 +94,16 @@
 
     /* Pedal Page Style */
 
-    .pedal-video {
+    .pedal-title h1 {
+        font-size: 2.5em;
+    }
+
+    .description h2 {
+        font-size: 1.75em;
+        font-weight: 500;
+    }
+
+    /* .pedal-video {
         padding: 10% 3%;
     }
 
@@ -79,7 +111,7 @@
         width: 100%;
         height: 220px;
         margin: auto;
-    }
+    } */
 
     /* Pedal Slideshow */
 
@@ -98,6 +130,7 @@
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         scroll-snap-stop: always;
+        margin: 25px auto;
     }
 
     .slideshow::-webkit-scrollbar {
