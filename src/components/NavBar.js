@@ -8,28 +8,14 @@ import { useEffect } from "react";
 
 function NavBar({setPedal, allPedals}) {
     const [isActive, setIsActive] = useState(false);
-    const [showDrop, setShowDrop] = useState(false);
-
-    // useEffect(() => {
-    //     let navList = document.getElementById('nav-list');
-    //     let btns = navList.getElementsByClassName('nav-btn');
-    //     console.log('hi')
-
-    //     for(let i = 0; i < btns.length; i++) {
-    //         console.log('hello')
-    //         btns[i].addEventListener("click", function() {
-    //             let current = document.getElementsByClassName("active");
-    //             current[0].className = current[0].className.replace(" active", "");
-    //             this.className += " active";
-    //             console.log(this)
-    //         });
-    //     }
-    // })    
+    const [showDrop, setShowDrop] = useState(false);  
 
     function handleClick(index) {
         setPedal(allPedals[index]);
         setShowDrop(false);
         setIsActive(false);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     return(
