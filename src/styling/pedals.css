@@ -150,7 +150,7 @@
         margin-top: -22px;
         padding: 16px;
         color: white;
-        text-shadow: 1px 1px 10px black;
+        /* text-shadow: 1px 1px 10px black; */
         /* font-weight: bold; */
         font-size: 50px;
         transition: 0.6s ease;

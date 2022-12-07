@@ -96,6 +96,7 @@ p {
 .carousel-container{
   display: flex;
   align-items: center;
+  margin-top: 10%;
 }
 
 .carousel {
@@ -138,20 +139,8 @@ p {
 .carousel-container > button {
   border: none;
   background-color: transparent;
-  font-size: 400%;
-}
-
-.carousel-container > button:hover{
-  cursor: pointer;
-}
-
-#left-button{
-  left: 2%;
-  position: absolute;
-}
-
-#right-button {
-  right: 2%;
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 1));
+  transform: scale(1);
   position: absolute;
 }
 
@@ -161,9 +150,63 @@ p {
     width: 50%;
     text-align: center;
   }
-
+  
   .small-container h1 {
     font-size: 2.5em;
+  }
+
+  .carousel-container > button{
+    font-size: 400%;
+  }
+  
+  .carousel-container > button:hover{
+    cursor: pointer;
+  }
+  
+  #left-button{
+    left: 1%;
+  }
+  
+  #right-button {
+    right: 1%;
+  }
+  
+  #left-button:hover{animation: pulse-left 2s infinite;}
+  
+  #right-button:hover{animation: pulse-right 2s infinite;}
+  
+  @keyframes pulse-left {
+    0% {
+      transform: scale(0.9);
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.7));
+    }
+  
+    70% {
+      transform: scale(1);
+      filter: drop-shadow(-20px 0 0 rgba(0, 0, 0, 0));
+    }
+  
+    100% {
+      transform: scale(0.9);
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    }
+  }
+  
+  @keyframes pulse-right {
+    0% {
+      transform: scale(0.9);
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.7));
+    }
+  
+    70% {
+      transform: scale(1);
+      filter: drop-shadow(20px 0 0 rgba(0, 0, 0, 0));
+    }
+  
+    100% {
+      transform: scale(0.9);
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    }
   }
 }
 
@@ -171,6 +214,18 @@ p {
   .small-container {
     width: 75%;
     text-align: center;
+  }
+  
+  .carousel-container > button{
+    font-size: 200%;
+  }
+
+  #left-button{
+    left: 0%;
+  }
+  
+  #right-button {
+    right: 0%;
   }
 }
 
