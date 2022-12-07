@@ -13,7 +13,7 @@ function Pedal({selectedPedal, allPedals}){
         }
     },[selectedPedal])
     
-    const {title, subtitle, description, images, video} = activePedal;
+    const {title, subtitle, description, images, video, review} = activePedal;
 
 
     return(
@@ -53,12 +53,19 @@ function Pedal({selectedPedal, allPedals}){
             : null}
             {images ? <Slideshow images={images} /> : null}
             {video ? 
-            <div className="pedal-video-container">
-                <div className="pedal-video">
-                    <iframe src={video} title={title}></iframe>
+                <div className="pedal-video-container">
+                    <div className="pedal-video">
+                        <iframe src={video} title={title}></iframe>
+                    </div>
                 </div>
-            </div>
              : null}
+            {review ? 
+                <div className="pedal-video-container">
+                    <div className="pedal-video">
+                        <iframe src={review} title={title}></iframe>
+                    </div>
+                </div> 
+            : null}
         </div>
     )
 }

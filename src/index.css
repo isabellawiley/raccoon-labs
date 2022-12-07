@@ -91,11 +91,79 @@ p {
   border: 2px solid grey;
 }
 
+/* Carousel */
+
+.carousel-container{
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin: auto;
+}
+
+.carousel-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.carousel-container > button {
+  border: none;
+  background-color: transparent;
+  font-size: 400%;
+}
+
+.carousel-container > button:hover{
+  cursor: pointer;
+}
+
+#left-button{
+  left: 2%;
+  position: absolute;
+}
+
+#right-button {
+  right: 2%;
+  position: absolute;
+}
+
 
 @media screen and (min-width: 769px) {
   .small-container {
     width: 50%;
     text-align: center;
+  }
+
+  .small-container h1 {
+    font-size: 2.5em;
   }
 }
 

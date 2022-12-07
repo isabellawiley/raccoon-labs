@@ -91,7 +91,6 @@
 .links {
     display: flex;
     position: absolute;
-    right: 0%;
 }
 
 .links img {
@@ -202,7 +201,7 @@
 
     .links {
         left: 5%;
-        /* margin-top: 20px; */
+        margin-top: 5px;
     }
 
     /* .links img {
@@ -210,7 +209,7 @@
     } */
     .navigation {
         width: 100%;
-        padding: 1rem 0rem;
+        padding: 1.25rem 0rem;
     }
 
     .navbar.expanded #nav-list {
