@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Slideshow from "./Slideshow";
+import YouTube from "react-youtube";
+import PedalModal from "./PedalModal";
 
 function Pedal({selectedPedal, allPedals}){
     let {id} = useParams();
@@ -45,7 +47,8 @@ function Pedal({selectedPedal, allPedals}){
             {images ? 
             <div className="pedal-image">
                 {images.map((pic, index) =>
-                    <img src={pic} alt={title} key={index} />
+                    // <img src={pic} alt={title} key={index} />
+                    <PedalModal image={pic} />
                 )}
                 {/* <img src={images[1]} alt={title}/>
                 {images[2] ? <img src={images[2]} alt={title}/> : null} */}
@@ -55,14 +58,16 @@ function Pedal({selectedPedal, allPedals}){
             {video ? 
                 <div className="pedal-video-container">
                     <div className="pedal-video">
-                        <iframe src={video} title={title}></iframe>
+                        {/* <iframe src={video} title={title}></iframe> */}
+                        <YouTube videoId={video.replace("https://www.youtube.com/embed/", "")}/>
                     </div>
                 </div>
              : null}
             {review ? 
                 <div className="pedal-video-container">
                     <div className="pedal-video">
-                        <iframe src={review} title={title}></iframe>
+                        {/* <iframe src={review} title={title}></iframe> */}
+                        <YouTube videoId={review.replace("https://www.youtube.com/embed/", "")}/>
                     </div>
                 </div> 
             : null}

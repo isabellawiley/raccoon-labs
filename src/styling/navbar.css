@@ -215,13 +215,10 @@
     .navbar.expanded #nav-list {
         display: block;
         position: absolute;
-        /* top: 60px;
-        left: 0; */
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 77px);
+        height: 100vh;
         background-color: white;
-        /* border-top: 1px solid black; */
         margin-top: -10%;
         z-index: 2;
         padding: 0;

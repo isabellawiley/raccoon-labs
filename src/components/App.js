@@ -8,8 +8,10 @@ import Contact from './Contact';
 import { useState } from "react";
 import allPedals from "../assets/pedalData.json";
 import Pedal from './Pedal';
+import { BiLinkExternal } from "react-icons/bi";
 import '../styling/pedals.css'
 import '../styling/responsive.css'
+import { IconContext } from 'react-icons';
 
 function App() {
   const [pedal, setPedal] = useState({});
@@ -37,8 +39,19 @@ function App() {
           <Pedal selectedPedal={pedal}  allPedals={allPedals}/>
         </Route>
       </Switch>
+      <div className='footer'>
+        <p>©2022 by Raccoon Labs. Proudly created by <a href='https://www.linkedin.com/in/isabella-wiley/' target="_blank" rel="noreferrer">
+             Isabella Wiley 
+            <IconContext.Provider value={{size: '.8em'}}>
+              <BiLinkExternal/>
+            </IconContext.Provider>
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+//BiLinkExternal
