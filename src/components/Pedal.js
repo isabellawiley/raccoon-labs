@@ -31,7 +31,7 @@ function Pedal({selectedPedal, allPedals}){
                 </div>
                 <div className="spacing">
                 {description?.bullets ? 
-                    description?.bullets.map((point) => <p>{point}</p>) : <p></p>
+                    description?.bullets.forEach((point) => <p>{point}</p>) : <p></p>
                 }
                 </div>
                 <div className="spacing">
@@ -46,9 +46,9 @@ function Pedal({selectedPedal, allPedals}){
             </div>
             {images ? 
             <div className="pedal-image">
-                {images.map((pic, index) =>
+                {images.map((pic) =>
                     // <img src={pic} alt={title} key={index} />
-                    <PedalModal image={pic} />
+                    <PedalModal key={pic.id} image={pic} />
                 )}
                 {/* <img src={images[1]} alt={title}/>
                 {images[2] ? <img src={images[2]} alt={title}/> : null} */}

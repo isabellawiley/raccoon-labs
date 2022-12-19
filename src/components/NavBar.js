@@ -4,7 +4,6 @@ import link_icon from "../assets/link_icon.png";
 import { Link } from "react-router-dom";
 import "../styling/navbar.css"
 import { useState } from "react";
-import { useEffect } from "react";
 
 function NavBar({setPedal, allPedals}) {
     const [isActive, setIsActive] = useState(false);
@@ -47,7 +46,6 @@ function NavBar({setPedal, allPedals}) {
                                             <i className={showDrop ? "arrow up" : "arrow down"} onClick={() => setShowDrop(!showDrop)}></i>
                                         </div>
                                     </button>
-                                    {/* <div className={isActive ? "navigation-menu expanded" : "navigation-menu"}> */}
                                     <ul className={showDrop ? "show dropdown-content" : "dropdown-content"}>
                                         <li onClick={() => handleClick(0)}><Link to='/surf-and-destroy'>Surf & Destroy</Link></li>
                                         <li onClick={() => handleClick(1)}><Link to='/ecto-cooler'>Ecto Cooler</Link></li>
@@ -55,7 +53,6 @@ function NavBar({setPedal, allPedals}) {
                                         <li onClick={() => handleClick(3)}><Link to='/acid-bath'>Acid Bath</Link></li>
                                         <li onClick={() => handleClick(4)}><Link to='/stanky-driver'>Stanky Driver</Link></li>
                                     </ul>
-                                {/* </div> */}
                                 </div>
                             </li>
                             <li className="nav-btn"><a href="/how-to-buy">How To Buy</a></li>
@@ -64,8 +61,8 @@ function NavBar({setPedal, allPedals}) {
                         </ul>
                     </div>
                     <div className="links">
-                        <a href="https://reverb.com/shop/raccoon-dad-fx" target="_blank" rel="noreferrer"><img src={link_icon} alt="link icon"/></a>
-                        <a href="https://www.instagram.com/raccoonlabs/" target="_blank" rel="noreferrer"><img src={instagram_logo} alt="instagram"/></a>
+                        <a href="https://reverb.com/shop/raccoon-dad-fx" target="_blank" rel="noreferrer" title="Reverb Store"><img src={link_icon} alt="link icon"/></a>
+                        <a href="https://www.instagram.com/raccoonlabs/" target="_blank" rel="noreferrer" title="Instagram"><img src={instagram_logo} alt="instagram"/></a>
                     </div>
                 </div>
             </div>

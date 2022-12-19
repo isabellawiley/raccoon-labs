@@ -164,6 +164,7 @@
     #nav-list {
         display: flex;
         padding: 0;
+        margin: 8px auto;
     }
 
     #nav-list li {
@@ -281,5 +282,11 @@
 
     .arrow {
         display: inline-block;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .navbar.expanded #nav-list {
+        margin-top: -5%;
     }
 }

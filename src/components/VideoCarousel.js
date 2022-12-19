@@ -7,6 +7,9 @@ function VideoCarousel({videos}){
     const [activeIndex, setActiveIndex] = useState(0);
     const [mouseIn, setMouseIn] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    // const opts = {
+    //     sandbox: 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation'
+    // }
 
     function updateIndex(newIndex) {
         if(newIndex < 0){
@@ -26,11 +29,15 @@ function VideoCarousel({videos}){
             }
         }, 3500);
 
+        let vids = document.getElementsByClassName('pedalYtVid');
+        // vids?.forEach((vid) => vid.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation'))
+
         return() => {
             if(interval) {
                 clearInterval(interval);
             }
         }
+
     })
 
     function handleTouchStart(event){
@@ -46,6 +53,12 @@ function VideoCarousel({videos}){
             }
         })
     }
+
+    function handleReady(event){
+        console.log('before: ', event.target.h.sandbox)
+        event.target.h.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation');
+        console.log('after: ', event.target.h.sandbox)
+    }
     
     return(
         <div className="carousel-container">
@@ -54,7 +67,7 @@ function VideoCarousel({videos}){
                     {videos.map((vid, index) => 
                         <div key={index} className="carousel-item-container" >
                             <div className="carousel-item">
-                                <YouTube videoId={vid.replace("https://www.youtube.com/embed/", "")} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} sandbox="allow-presentation"/>
+                                <YouTube videoId={vid.replace("https://www.youtube.com/embed/", "")} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} iframeClassName="pedalYtVid" onReady={(event) => handleReady(event)}/>
                             </div>
                         </div>
                     )}

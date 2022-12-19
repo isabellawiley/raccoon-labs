@@ -34,11 +34,19 @@
 
 .pedal-image {
     display: none;
+    padding: 5%;
+    justify-content: space-evenly;
 }
 
 .slideshow {
     display: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-snap-stop: always;
+    margin: 25px auto;
 }
+
 
 @media screen and (min-width: 769px) {
 
@@ -60,12 +68,13 @@
     }
 
     .pedal-image {
-        padding: 5%;
         display: flex;
-        justify-content: space-evenly;
     }
       
     .pedal-image img {
+        /* width: 100%;
+        height: auto;
+        min-width: 400px; */
         width: 600px;
         height: 600px;
     }
@@ -74,14 +83,61 @@
         display: none;
     }
 
-    /* .pedal-video {
-        padding: 10%;
+    /* Pedal Modal */
+    #pedalImg {
+        cursor: pointer;
+        transition: 0.3s;
     }
-
-    .pedal-video iframe {
-        width: 1280px;
-        height: 720px;
-    } */
+    
+    #pedalImg:hover{opacity: 0.7;}
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 600px;
+        padding-bottom: 10%;
+    }
+    
+    @keyframes zoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+    }
+    
+    @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+    }
+    
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .close:hover, .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -101,6 +157,7 @@
     .description h2 {
         font-size: 1.75em;
         font-weight: 500;
+        word-wrap: break-word;
     }
 
     /* .pedal-video {
@@ -126,11 +183,6 @@
 
     .slideshow {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scroll-snap-stop: always;
-        margin: 25px auto;
     }
 
     .slideshow::-webkit-scrollbar {
@@ -155,7 +207,7 @@
         font-size: 50px;
         transition: 0.6s ease;
         user-select: none;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
     .slideshow-arrow {
@@ -180,4 +232,10 @@
         transition: ease 1000ms;
         white-space: nowrap;
       }
+}
+
+@media screen and (min-width: 700px) and (max-width: 768px) {
+    .prev, .next {
+        display: none;
+    }
 }

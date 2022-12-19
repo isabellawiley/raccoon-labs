@@ -17,8 +17,9 @@ function App() {
   const [pedal, setPedal] = useState({});
 
   return (
-    <div className='app'>
+    <div>
       <NavBar setPedal={setPedal} allPedals={allPedals}/>
+      <div className='app'>
       <Switch>
         <Route exact path='/'>
           <Home allPedals={allPedals} setPedal={setPedal} />
@@ -47,6 +48,7 @@ function App() {
             </IconContext.Provider>
           </a>
         </p>
+      </div>
       </div>
     </div>
   );

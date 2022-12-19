@@ -7,7 +7,7 @@ function Slideshow({images}) {
         let next = (document.getElementsByClassName('next'))[0];
         let slidesScroll = event.target.scrollLeft;
 
-        if(slidesScroll < 300){
+        if(slidesScroll < window.innerWidth / 2){
             prev.className = 'prev hidden'
             next.className = 'next'
         }
@@ -18,11 +18,11 @@ function Slideshow({images}) {
     }
 
     function nextSlide() {
-        (document.getElementsByClassName('slideshow'))[0].scrollLeft += 400;
+        (document.getElementsByClassName('slideshow'))[0].scrollLeft += window.innerWidth;
     }
 
     function prevSlide() {
-        (document.getElementsByClassName('slideshow'))[0].scrollLeft -= 400;
+        (document.getElementsByClassName('slideshow'))[0].scrollLeft -= window.innerWidth;
     }
 
     if (!Array.isArray(images) || images.length <= 0) {
