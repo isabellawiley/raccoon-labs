@@ -6,14 +6,15 @@ import YouTube from "react-youtube";
 import PedalModal from "./PedalModal";
 
 function Pedal({selectedPedal, allPedals}){
+    console.log('ran');
     let {id} = useParams();
     const [activePedal, setActivePedal] = useState(()=>selectedPedal);
 
-    useEffect(() => {
-        if(id){
-            setActivePedal(allPedals.find(element => element.link == id))
-        }
-    },[selectedPedal])
+    // useEffect(() => {
+    //     if(id){
+    //         setActivePedal(allPedals.find(element => element.link == id))
+    //     }
+    // },[selectedPedal])
     
     const {title, subtitle, description, images, video, review} = activePedal;
 

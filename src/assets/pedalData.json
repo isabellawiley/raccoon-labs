@@ -31,7 +31,7 @@
         "image": "images/surf_and_destroy_pedal.png",
         "images": ["images/surf_and_destroy_pedal-front.png"],
         "link": "surf-and-destroy",
-        "video": "https://www.youtube.com/embed/oFygKHRTIMc"
+        "video": "https://www.youtube-nocookie.com/embed/oFygKHRTIMc"
     },
     {
         "id": 2,
@@ -49,8 +49,8 @@
         "image": "images/ecto_cooler_pedal.png",
         "images": ["images/ecto_cooler_pedal-front.png", "images/ecto_cooler_pedal-back.png"],
         "link": "ecto-cooler",
-        "video": "https://www.youtube.com/embed/i4r82ZraGAA",
-        "review": "https://www.youtube.com/embed/qA3WNbePrVY"
+        "video": "https://www.youtube-nocookie.com/embed/i4r82ZraGAA",
+        "review": "https://www.youtube-nocookie.com/embed/qA3WNbePrVY"
     },
     {
         "id": 3,
@@ -62,7 +62,7 @@
         "image": "images/noise_ensemble_pedal.png",
         "images": ["images/noise_ensemble_pedal-front.png", "images/noise_ensemble_pedal-back.png"],
         "link": "noise-ensemble",
-        "video": "https://www.youtube.com/embed/ov7C6KKKFAk"
+        "video": "https://www.youtube-nocookie.com/embed/ov7C6KKKFAk"
     },
     {
         "id": 4,
@@ -74,7 +74,7 @@
         "image": "images/acid_bath_pedal.png",
         "images": ["images/acid_bath_pedal-front.png", "images/acid_bath_pedal-back.png"],
         "link": "acid-bath",
-        "video": "https://www.youtube.com/embed/O5t8ylkxT0w"
+        "video": "https://www.youtube-nocookie.com/embed/O5t8ylkxT0w"
     },
     {
         "id": 5,
