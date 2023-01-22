@@ -37,7 +37,6 @@ function VideoCarousel({videos}){
                 clearInterval(interval);
             }
         }
-
     })
 
     function handleTouchStart(event){
@@ -54,11 +53,12 @@ function VideoCarousel({videos}){
         })
     }
 
-    function handleReady(event){
-        console.log('before: ', event.target.h.sandbox)
-        event.target.h.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation');
-        console.log('after: ', event.target.h.sandbox)
-    }
+    // function handleReady(event){
+    //     console.log('before: ', event.target.h.sandbox)
+    //     event.target.h.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation');
+    //     console.log('after: ', event.target.h.sandbox)
+
+    // }
     
     return(
         <div className="carousel-container">
@@ -67,7 +67,8 @@ function VideoCarousel({videos}){
                     {videos.map((vid, index) => 
                         <div key={index} className="carousel-item-container" >
                             <div className="carousel-item">
-                                <YouTube videoId={vid.replace("https://www.youtube.com/embed/", "")} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} iframeClassName="pedalYtVid" onReady={(event) => handleReady(event)}/>
+                                {/* <YouTube videoId={vid.replace("https://www.youtube.com/embed/", "")} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} iframeClassName="pedalYtVid" onReady={(event) => handleReady(event)}/> */}
+                                <iframe src={vid} title='pedal video'></iframe>
                             </div>
                         </div>
                     )}
