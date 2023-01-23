@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { IconContext } from 'react-icons';
 import {MdArrowBackIosNew, MdArrowForwardIos} from 'react-icons/md';
 function Slideshow({images}) {
-
+    let slides = document.getElementsByClassName('slideshow')[0];
+    if (slides) {slides.scrollLeft = 0;}
+    
     function handleScroll(event) {
         let prev = (document.getElementsByClassName('prev'))[0];
         let next = (document.getElementsByClassName('next'))[0];

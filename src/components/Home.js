@@ -3,7 +3,6 @@ import VideoCarousel from './VideoCarousel';
 import { TbMail } from "react-icons/tb";
 
 function Home({allPedals, setPedal}) {
-    console.log('home');
     const videos = [];
     allPedals.forEach((pedal) => {
         if(pedal.video){

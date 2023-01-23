@@ -4,7 +4,6 @@ import YouTube from "react-youtube";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 
 function VideoCarousel({videos}){
-    console.log('ran vid');
     const [activeIndex, setActiveIndex] = useState(0);
     const [mouseIn, setMouseIn] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -24,20 +23,20 @@ function VideoCarousel({videos}){
     }
 
     useEffect(() => {
-        // const interval = setInterval(() => {
-        //     if(!mouseIn && !isPlaying){
-        //         updateIndex(activeIndex + 1);
-        //     }
-        // }, 3500);
+        if (window.innerWidth < 769){
+            setIsPlaying(true);
+        }
+        const interval = setInterval(() => {
+            if(!mouseIn && !isPlaying){
+                updateIndex(activeIndex + 1);
+            }
+        }, 3500);
 
-        // let vids = document.getElementsByClassName('pedalYtVid');
-        // // vids?.forEach((vid) => vid.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation'))
-
-        // return() => {
-        //     if(interval) {
-        //         clearInterval(interval);
-        //     }
-        // }
+        return() => {
+            if(interval) {
+                clearInterval(interval);
+            }
+        }
     })
 
     function handleTouchStart(event){
@@ -54,14 +53,20 @@ function VideoCarousel({videos}){
         })
     }
 
-    // function handleReady(event){
-    //     console.log('before: ', event.target.h.sandbox)
-    //     event.target.h.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation');
-    //     console.log('after: ', event.target.h.sandbox)
+    // function handleLoad(){
+        
+    //     let thor = document.getElementById("videoFrame");
+    //     if (thor){
+    //         document.getElementById('videoFrame').contentWindow.addEventListener('click', function(){
+    //             setIsPlaying(true);
+    //         })
 
+    //     }
     // }
 
-    
+    function handlePlay(){
+        // console.log('buttss')
+    }
     
     return(
         <div className="carousel-container">
@@ -70,8 +75,8 @@ function VideoCarousel({videos}){
                 <div className="inner" style={{transform: `translateX(-${activeIndex * 100}%)`}}>
                     {videos.map((vid, index) => 
                         <div key={index} className="carousel-item-container" >
-                            <div className="carousel-item">
-                                <iframe src={vid} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <div className="carousel-item" onTouchStart={() => setIsPlaying(true)}>
+                                <iframe id="videoFrame" src={vid} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
                             </div>
                         </div>
                     )}
