@@ -23,21 +23,20 @@ function VideoCarousel({videos}){
     }
 
     useEffect(() => {
+        if (window.innerWidth < 769){
+            setIsPlaying(true);
+        }
         const interval = setInterval(() => {
             if(!mouseIn && !isPlaying){
                 updateIndex(activeIndex + 1);
             }
         }, 3500);
 
-        let vids = document.getElementsByClassName('pedalYtVid');
-        // vids?.forEach((vid) => vid.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation'))
-
         return() => {
             if(interval) {
                 clearInterval(interval);
             }
         }
-
     })
 
     function handleTouchStart(event){
@@ -54,26 +53,35 @@ function VideoCarousel({videos}){
         })
     }
 
-    function handleReady(event){
-        console.log('before: ', event.target.h.sandbox)
-        event.target.h.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation');
-        console.log('after: ', event.target.h.sandbox)
+    // function handleLoad(){
+        
+    //     let thor = document.getElementById("videoFrame");
+    //     if (thor){
+    //         document.getElementById('videoFrame').contentWindow.addEventListener('click', function(){
+    //             setIsPlaying(true);
+    //         })
+
+    //     }
+    // }
+
+    function handlePlay(){
+        // console.log('buttss')
     }
     
     return(
         <div className="carousel-container">
+                    <button id="left-button" onClick={() => updateIndex(activeIndex - 1)}><AiOutlineDoubleLeft/></button>
             <div id="carousel" className="carousel" onMouseEnter={() => setMouseIn(true)} onMouseLeave={() => setMouseIn(false)} onTouchStart={(event) => handleTouchStart(event)} >
                 <div className="inner" style={{transform: `translateX(-${activeIndex * 100}%)`}}>
                     {videos.map((vid, index) => 
                         <div key={index} className="carousel-item-container" >
-                            <div className="carousel-item">
-                                <YouTube videoId={vid.replace("https://www.youtube.com/embed/", "")} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} iframeClassName="pedalYtVid" onReady={(event) => handleReady(event)}/>
+                            <div className="carousel-item" onTouchStart={() => setIsPlaying(true)}>
+                                <iframe id="videoFrame" src={vid} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>
                             </div>
                         </div>
                     )}
                 </div>
             </div>
-            <button id="left-button" onClick={() => updateIndex(activeIndex - 1)}><AiOutlineDoubleLeft/></button>
             <button id="right-button" onClick={() => updateIndex(activeIndex + 1)}><AiOutlineDoubleRight/></button>
         </div>
     )
