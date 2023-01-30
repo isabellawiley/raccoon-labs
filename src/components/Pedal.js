@@ -10,9 +10,9 @@ function Pedal({selectedPedal, allPedals}){
 
     useEffect(() => {
         if(id){
-            setActivePedal(allPedals.find(element => element.link == id))
+            setActivePedal(allPedals.find(element => element.link === id))
         }
-    },[selectedPedal])
+    },[selectedPedal, id])
     
     const {title, subtitle, description, images, video, review} = activePedal;
 

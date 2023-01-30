@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { IconContext } from 'react-icons';
 import {MdArrowBackIosNew, MdArrowForwardIos} from 'react-icons/md';
 function Slideshow({images}) {
@@ -37,19 +36,19 @@ function Slideshow({images}) {
             {images.length > 1 ? 
             <div className="slideshow-container">
                 <IconContext.Provider value={{className: 'slideshow-arrow'}}>
-                <a className="prev hidden" onClick={prevSlide}><MdArrowBackIosNew/></a>
-                <a className="next" onClick={nextSlide}><MdArrowForwardIos/></a>
+                <button className="prev hidden" onClick={prevSlide}><MdArrowBackIosNew/></button>
+                <button className="next" onClick={nextSlide}><MdArrowForwardIos/></button>
                 </IconContext.Provider>
                 <div className="slideshow" onScroll={handleScroll}>
                     {images.map((slide, index) => 
                         <div key={index} className="slide" >
-                                <img src={slide} alt='slide image' className='slideImage' />
+                                <img src={slide} alt='slide' className='slideImage' />
                             
                         </div>
                     )}
                 </div>
             </div> 
-            : <div className='slideshow'><img src={images[0]} alt='pedal image' className="slideshowImage"/></div>}
+            : <div className='slideshow'><img src={images[0]} alt='pedal' className="slideshowImage"/></div>}
         </div>
     )
 }

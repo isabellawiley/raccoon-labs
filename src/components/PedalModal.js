@@ -19,7 +19,7 @@ function PedalModal({image}){
             <img id='pedalImg' src={image} alt='pedal' onClick={handlePedalClick}/>
             <div id="myModal" className="modal">
                 <span className="close" onClick={handleClose}>&times;</span>
-                <img className="modal-content" id="img01"/>
+                <img className="modal-content" id="img01" alt="pedal"/>
             </div>
         </div>
     )

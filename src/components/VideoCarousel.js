@@ -1,17 +1,25 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useState } from "react";
-import YouTube from "react-youtube";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+import "../styling/carousel.css"
 
 function VideoCarousel({videos}){
     const [activeIndex, setActiveIndex] = useState(0);
     const [mouseIn, setMouseIn] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
-    // const opts = {
-    //     sandbox: 'allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation'
+
+    // function updateIndex(newIndex) {
+    //     if(newIndex < 0){
+    //         newIndex = videos.length - 1;
+    //     }
+    //     else if(newIndex >= videos.length) {
+    //         newIndex = 0;
+    //     }
+
+    //     setActiveIndex(newIndex);
     // }
 
-    function updateIndex(newIndex) {
+    const updateIndex = useCallback((newIndex) => {
         if(newIndex < 0){
             newIndex = videos.length - 1;
         }
@@ -20,7 +28,7 @@ function VideoCarousel({videos}){
         }
 
         setActiveIndex(newIndex);
-    }
+    }, [])
 
     useEffect(() => {
         if (window.innerWidth < 769){
@@ -37,7 +45,7 @@ function VideoCarousel({videos}){
                 clearInterval(interval);
             }
         }
-    })
+    }, [mouseIn, isPlaying, updateIndex, activeIndex])
 
     function handleTouchStart(event){
         let start = event.touches[0].clientX;
@@ -51,21 +59,6 @@ function VideoCarousel({videos}){
                 updateIndex(activeIndex - 1);
             }
         })
-    }
-
-    // function handleLoad(){
-        
-    //     let thor = document.getElementById("videoFrame");
-    //     if (thor){
-    //         document.getElementById('videoFrame').contentWindow.addEventListener('click', function(){
-    //             setIsPlaying(true);
-    //         })
-
-    //     }
-    // }
-
-    function handlePlay(){
-        // console.log('buttss')
     }
     
     return(
