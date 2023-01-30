@@ -70,7 +70,7 @@ function VideoCarousel({videos}){
     
     return(
         <div className="carousel-container">
-                    <button id="left-button" onClick={() => updateIndex(activeIndex - 1)}><AiOutlineDoubleLeft/></button>
+            <div id="left-button" onClick={() => updateIndex(activeIndex - 1)}><AiOutlineDoubleLeft/></div>
             <div id="carousel" className="carousel" onMouseEnter={() => setMouseIn(true)} onMouseLeave={() => setMouseIn(false)} onTouchStart={(event) => handleTouchStart(event)} >
                 <div className="inner" style={{transform: `translateX(-${activeIndex * 100}%)`}}>
                     {videos.map((vid, index) => 
@@ -82,7 +82,7 @@ function VideoCarousel({videos}){
                     )}
                 </div>
             </div>
-            <button id="right-button" onClick={() => updateIndex(activeIndex + 1)}><AiOutlineDoubleRight/></button>
+            <div id="right-button" onClick={() => updateIndex(activeIndex + 1)}><AiOutlineDoubleRight/></div>
         </div>
     )
 }

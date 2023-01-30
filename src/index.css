@@ -92,6 +92,7 @@ p {
 
 .white.button {
   background-color: transparent;
+  color: black;   
 }
 
 .black.button {
@@ -148,6 +149,7 @@ p {
   background-color: transparent;
   filter: drop-shadow(0 0 0 rgba(0, 0, 0, 1));
   transform: scale(1);
+  color: black;
 }
 
 @media screen and (min-width: 769px) {
@@ -176,7 +178,7 @@ p {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .carousel-container > button{
     font-size: 400%;
   }
@@ -191,10 +193,6 @@ p {
   
   #right-button {
     margin-right: 10px;
-  }
-
-  #left-button svg, #right-button svg {
-    fill: black;
   }
   
   #left-button:hover{animation: pulse-left 2s infinite;}
@@ -245,14 +243,32 @@ p {
   /* Carousel Buttons */
   .carousel-container > button{
     font-size: 200%;
+    width: 5%;
   }
 
-  #left-button{
+  #left-button, #right-button {
+    font-size: 200%;
+  }
+
+  /* #left-button{
     left: 0%;
   }
   
   #right-button {
     right: 0%;
+  } */
+
+  #left-button svg, #right-button svg {
+    position: relative;
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
+  }
+}
+
+@supports (-webkit-touch-callout: none){
+  #left-button, #right-button {
+    font-size: 200%;
+    width: 5%;
   }
 }
 
