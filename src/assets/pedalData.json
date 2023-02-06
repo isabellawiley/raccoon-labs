@@ -59,8 +59,8 @@
         "description": {
             "paragraph": "Treat your weird self to the uneasy wobbling echoes and thick hurtful fuzz of the NOISE ENSEMBLE. At it’s heart, this creature is a massive sounding fuzz with an echo that modulates more and more erratically as you turn up the secondary control (right knob). At lower settings, faux reverb and strange filtering sounds, at higher settings, more and more chaos. Left knob is the volume, it gets real loud man."
         },
-        "image": "images/noise_ensemble_pedal.png",
-        "images": ["images/noise_ensemble_pedal-front.png", "images/noise_ensemble_pedal-back.png"],
+        "image": "images/noise-ensemble-pedal.png",
+        "images": ["images/noise-ensemble-front.jpg", "images/noise-ensemble-back.png"],
         "link": "noise-ensemble",
         "video": "https://www.youtube-nocookie.com/embed/ov7C6KKKFAk"
     },
